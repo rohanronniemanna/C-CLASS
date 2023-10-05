@@ -1,31 +1,17 @@
 #include <stdio.h>
 
-int main()
-{
-    int i, j, k, rows;
+int main() {
+    int n, i, j, k;
 
-    printf("Enter the no. of rows: ");
-    scanf("%d", &rows);
+    printf("Enter the number of rows for the palindrome triangle: ");
+    scanf("%d", &n);
 
-    printf("Output: \n\n");
-    for (i = 1; i <= rows; i++)
-    {
-        for (k = 1; k < i; k++)
+    for (i = 1; i <= n; i++) {
+        for (j = 1; j <= n - i; j++)
             printf(" ");
 
-        for (j = i; j <= rows; j++)
-            printf("* ");
-
-        printf("\n");
-    }
-
-    for (i = rows - 1; i >= 1; i--)
-    {
-        for (k = 1; k < i; k++)
-            printf(" ");
-
-        for (j = i; j <= rows; j++)
-            printf("* ");
+        for (k = 1; k <= 2 * i - 1; k++)
+            printf( " %d", k);
 
         printf("\n");
     }
