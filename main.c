@@ -1,20 +1,25 @@
-#include <stdio.h>
-
-int main() {
-    int n, i, j, k;
-
-    printf("Enter the number of rows for the palindrome triangle: ");
-    scanf("%d", &n);
-
-    for (i = 1; i <= n; i++) {
-        for (j = 1; j <= n - i; j++)
-            printf(" ");
-
-        for (k = 1; k <= 2 * i - 1; k++)
-            printf( " %d", k);
-
-        printf("\n");
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+int operations(int a,int b){
+    int add,subs,mul,div;
+    add=a+b;
+    if(a>b){
+        subs=a-b;
+    }else{
+        subs=b-a;
     }
-
-    return 0;
+    mul=a*b;
+    if(a>b){
+        div=a/b;
+    }else{
+        div=b/a;
+    }
+    printf("THE SUM OF NUMBERS ARE: %d\n",add);
+    printf("THE SUBTRACTION OF NUMBERS ARE: %d\n",subs);
+    printf("THE MULTIPLICATION OF NUMBERS ARE: %d\n",mul);
+    printf("THE DIVISION OF NUMBERS ARE: %d\n",div);
+}
+int main() {
+    operations(12, 6);
 }
